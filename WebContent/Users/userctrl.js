@@ -1,6 +1,7 @@
+var app= angular.module('userApp', []);
 app.controller('userctrl', [ '$scope', '$http', '$rootScope', '$cookieStore',
 		function($scope, $http, $rootScope, $cookieStore) {
-			var BASE_URL = 'http://localhost:8083/Backend';
+			var BASE_URL = 'http://localhost:8181/CollaborationBackend';
 
 			$scope.submit = function() {
 
