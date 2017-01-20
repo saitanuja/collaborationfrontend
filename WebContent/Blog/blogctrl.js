@@ -1,6 +1,6 @@
 var app = angular.module("blogapp", [])
 app.controller('blogcntrl', [ '$scope', '$http', function($scope, $http) {
-	var BASE_URL = 'http://localhost:8181/CollaborationBackend';
+	var BASE_URL = 'http://localhost:8181/CollaborationBackend/';
 
 	$scope.getAllBlogs = function() {
 		console.log("get all blogs")
@@ -51,5 +51,15 @@ app.controller('blogcntrl', [ '$scope', '$http', function($scope, $http) {
 		$scope.id = id;
 		$scope.title = title;
 		$scope.content = content;
+	}
+	
+	$scope.like=function(id){
+		$http({
+			method : 'POST',
+			url : BASE_URL + '/likeblog/'+id,
+		}).success(function(data, status, headers, config) {
+			alert("success")
+		})
+		
 	}
 } ]);
