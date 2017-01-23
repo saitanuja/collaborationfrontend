@@ -10,11 +10,25 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl : "Blog/blog.html",
 		controller : 'blogcntrl'
 
-	}).when("/forum", {
+	})
+	.when("/viewblog", {
+		templateUrl : "Blog/viewblog.html",
+		controller : 'blogcntrl'
+
+	})
+	
+	.when("/forum", {
 		templateUrl : "Forum/Forum.html",
 		controller : 'forumctrl'
 
-	}).when("/register", {
+	})
+	.when("/viewforum", {
+		templateUrl : "Forum/viewforum.html",
+		controller : 'forumctrl'
+
+	})
+	
+	.when("/register", {
 		templateUrl : "Users/register.html",
 		controller : "userctrl"
 	}).when("/login", {
@@ -60,7 +74,7 @@ function run($rootScope, $location, $cookieStore, $http) {
 		// redirect to login page if not logged in and trying to access a
 		// restricted page
 		var restrictedPage = $.inArray($location.path(), [ '/login',
-				'/register', '/home', '/jobs' ]) === -1;
+				'/register', '/home', '/jobs','/viewblog','/viewforum' ]) === -1;
 		var loggedIn = $rootScope.globals.currentUser;
 		if (restrictedPage && !loggedIn) {
 			$location.path('/login');

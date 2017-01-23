@@ -42,28 +42,50 @@
 <link rel="stylesheet" href="resources/css/user.css">
 <link rel="stylesheet" href="resources/css/comments.css">
 
-<!-- <script
+ <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- -->
+	
+	
+
 </head>
-<body data-ng-app="myApp">
+
+	<body data-ng-app="myApp">
+<h1>
 <title><center>Collaboration</center></title>
+</h1>
 	<div class="container-fluid">
+	
 		<nav class="navbar navbar-inverse" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
+			
 			<div class="navbar-header">
 
 				<a class="navbar-brand" href="#home"><b>Collaboration </b>Home</a>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
+			
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="#blog">Blog</i></a></li>
-					<li><a href="#forum">Forum</a></li>
+					<!-- <li><a href="#blog">Blog</a></li> -->
+					
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blogs <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#blog">create Blog</a></li>
+          <li><a href="#viewblog">View Blog</a></li>
+         
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Forums<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#forum">create Forum</a></li>
+          <li><a href="#viewforum">View Forum</a></li>
+         
+        </ul>
+      </li>
+					<!-- <li><a href="#forum">Forum</a></li>
+					<li><a href="#individualforum">View Forum</a></li> -->
 					<li><a href="#users">Find Friends</a></li>
 					<li><a href="#chat">Chat</a></li>
 					<li><a href="#jobs">Find Jobs</a></li>
@@ -89,58 +111,53 @@
 			<!-- /.navbar-collapse -->
 		</nav>
 	</div>
-	<div data-ng-view></div>
+	
 
 
-</body>
-
-</html>
-	<!--  carousel-->
-
-	<!-- <div class="container">
+<div class="container">
 		<br>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			Indicators
+			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
 			</ol>
 
-			Wrapper for slides
+			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<img
-						src="http://fundacionamag.org/notas/wp-content/uploads/2013/04/Razones-principales-para-colaborar-con-La-Fundacion-4.jpg"
-						alt="OUR MOTO" width="460" height="345">
-					<h3>OUR MOTO</h3>
+						src="F:\project2\CollaborationFrontend\WebContent\resources\image\PK-VOLUNTEERS.jpg"
+						alt="collaboration" width="1000" height="300">
+					
 				</div>
 
 				<div class="item">
 					<img
-						src="http://www.itbusinessedge.com/imagesvr_ce/itbe/ss/CollaborationHuman00.jpg"
-						alt="OUR THOUGHTS" width="460" height="345">
-					<h3>OUR THOUGHTS</h3>
+						src="F:\project2\CollaborationFrontend\WebContent\resources\image\collaboration best.jpg"
+						alt="creative" width="1000" height="300">
+					
 				</div>
 
 				<div class="item">
 
 					<img
-						src="http://www.thepartnership.org/wp-content/uploads/2015/04/collaboration-photo.jpg"
-						alt="OUR GOAL" width="460" height="345">
-					<h3>OUR GOAL</h3>
+						src="F:\project2\CollaborationFrontend\WebContent\resources\image\team work.jpg"
+						alt="group" width="1000" height="300">
+					
 				</div>
 
-				<div class="item">
+				 <div class="item">
 					<img
-						src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOfAAAAJDNmZTc4NGQxLWRjYzYtNGJiMC05MWJkLWM5YjYyMDUwMGY0Yg.jpg"
-						alt="SUCCESS" width="460" height="345">
-					<h3>SUCCESS</h3>
-				</div>
+						src="F:\project2\CollaborationFrontend\WebContent\resources\image\collaboration-design.jpg"
+						alt="design" width="1000" height="300">
+					
+				</div> 
 			</div>
 
-			Left and right controls
+			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" role="button"
 				data-slide="prev"> <span
 				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -151,5 +168,8 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
-	</div> -->
+	</div>
+<div data-ng-view></div>
+</body>
 
+</html>

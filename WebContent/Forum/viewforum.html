@@ -15,9 +15,11 @@
 <body data-ng-app="myApp">
 
 	<div class="container">
-		<form role="form" data-ng-submit="submit()" class="form-horizontal"
+	<h2>View Forum</h2>
+	<div data-ng-controller="forumctrl">
+		<!-- <form role="form" data-ng-submit="submit()" class="form-horizontal"
 			action="" data-ng-controller="forumctrl">
-			<h2>Create Forum</h2>
+			
 			<div class="form-group">
 				<label for="title" class="col-sm-3 control-label">Name</label>
 				<div class="col-sm-9">
@@ -56,7 +58,7 @@
 							placeholder="search forum" class="form-control"> <span
 							class="glyphicon glyphicon-search form-control-feedback"></span>
 					</div>
-				</form>
+				</form> -->
 			</div>
 		</div>
 	</div>
@@ -78,8 +80,9 @@
 							<!-- <button data-ng-click="deleteforum(forum.id)"
 								class="btn btn-primary btn-danger">delete</button> -->
 								<div class="w3-container">
-								 <button data-ng-click="deleteforum(forum.id)"
-		                                   class="w3-btn w3-white w3-border w3-round-large">Delete</button>
+									<button data-ng-show="forum.userid==globals.currentUser.username" data-ng-click="editforum(forum.id,forum.name,forum.topic,forum.description)" class="btn btn-success">Edit</button>
+	                  <button data-ng-show="forum.userid==globals.currentUser.username" data-ng-click="deleteforum(forum.id)" class="btn btn-primary btn-danger">Delete</button>
+	                        <a href="#login"><button align="right" class="btn btn-primary" data-ng-click="like(blog.id)">Login To Comment This Forum</button> </a>
 		                                    </div>
 						</div>
 					</div>
