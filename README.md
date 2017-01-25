@@ -1,4 +1,4 @@
-# MetricTeam.com - NIIT Project ②
+# MetricTeam.com - CollaborationFrontend ②
 Collaboration project consisting of basic funtionality like
  - New user registrations
  - Blogs
